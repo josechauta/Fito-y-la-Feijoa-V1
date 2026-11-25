@@ -70,7 +70,7 @@ function dibujarMapa(){
 }
 function moverSinAnimar(x,y){oruga.style.transition="none";oruga.style.left=`${x}%`;oruga.style.top=`${y}%`;requestAnimationFrame(()=>requestAnimationFrame(()=>oruga.style.transition=""))}
 function finalizar(){
-  preguntaEl.textContent="¡Llegaste a la copa del árbol!";mensaje.textContent=`Completaste el recorrido con ${aciertos} aciertos de ${preguntas.length}.`;mensaje.className="mensaje correcto";progreso.textContent="Recorrido completado";respuestasEl.innerHTML="";
+  preguntaEl.textContent="¡Felicitaciones, Llegaste a la Feijoa!";mensaje.textContent=`Llevaste a Fito en ${aciertos} aciertos de ${preguntas.length}.`;mensaje.className="mensaje correcto";progreso.textContent="Recorrido completado";respuestasEl.innerHTML="";
   [["Jugar de nuevo",iniciar],["Menú principal",mostrarMenu]].forEach(([t,f])=>{const b=document.createElement("button");b.type="button";b.className="respuesta";b.textContent=t;b.addEventListener("click",f);respuestasEl.appendChild(b)});
 }
 function abrirModal(t,h){modalTitulo.textContent=t;modalTexto.innerHTML=h;modal.classList.remove("oculta");$("btn-cerrar-modal").focus()}

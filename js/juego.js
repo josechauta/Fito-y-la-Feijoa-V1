@@ -49,7 +49,7 @@ function mostrarMenu(){juego.classList.add("oculta");menu.classList.remove("ocul
 function cargarPregunta(){
   bloqueado=false; destinos.innerHTML=""; const nodo=mapa[nodoActual], p=preguntas[nodo.p];
   preguntaEl.textContent=p.enunciado; respuestasEl.innerHTML=""; mensaje.textContent="Selecciona una respuesta con el mouse."; mensaje.className="mensaje";
-  progreso.textContent=`Nivel ${nivel+1} de ${preguntas.length}`; marcador.textContent=`Aciertos: ${aciertos}`;
+  progreso.textContent=`Ramas usadas ${nivel+1}`; marcador.textContent=`Aciertos: ${aciertos}`;
   p.opciones.forEach(op=>{const b=document.createElement("button");b.type="button";b.className="respuesta";b.textContent=op;b.addEventListener("click",()=>evaluar(op,p));respuestasEl.appendChild(b)});
 }
 function evaluar(op,p){
@@ -70,7 +70,7 @@ function dibujarMapa(){
 }
 function moverSinAnimar(x,y){oruga.style.transition="none";oruga.style.left=`${x}%`;oruga.style.top=`${y}%`;requestAnimationFrame(()=>requestAnimationFrame(()=>oruga.style.transition=""))}
 function finalizar(){
-  preguntaEl.textContent="¡Felicitaciones, Llegaste a la Feijoa!";mensaje.textContent=`Llevaste a Fito en ${aciertos} aciertos de ${preguntas.length}.`;mensaje.className="mensaje correcto";progreso.textContent="Recorrido completado";respuestasEl.innerHTML="";
+  preguntaEl.textContent="¡Felicitaciones, Llegaste a la Feijoa!";mensaje.textContent=`Llevaste a Fito en ${aciertos} pasos.`;mensaje.className="mensaje correcto";progreso.textContent="Recorrido completado";respuestasEl.innerHTML="";
   [["Jugar de nuevo",iniciar],["Menú principal",mostrarMenu]].forEach(([t,f])=>{const b=document.createElement("button");b.type="button";b.className="respuesta";b.textContent=t;b.addEventListener("click",f);respuestasEl.appendChild(b)});
 }
 function abrirModal(t,h){modalTitulo.textContent=t;modalTexto.innerHTML=h;modal.classList.remove("oculta");$("btn-cerrar-modal").focus()}

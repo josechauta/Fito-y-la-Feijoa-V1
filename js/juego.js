@@ -19,7 +19,7 @@ const preguntas = [
 /* Árbol real de decisiones. Cada nodo tiene posición, pregunta y dos destinos.
    Si el jugador falla, se cierra una rama. Si acierta, puede elegir cualquiera. */
 const mapaBase = {
- inicio:{x:28,y:90,p:0,rutas:[{a:"centro2",x:28,y:70},{a:"izq1",x:20,y:80},{a:"der1",x:37,y:80}]},
+ inicio:{x:20,y:93,p:0,rutas:[{a:"centro2",x:28,y:70},{a:"izq1",x:20,y:80},{a:"der1",x:37,y:80}]},
  izq1:{x:20,y:80,p:1,rutas:[{a:"centro2",x:28,y:70},{a:"der1",x:37,y:80}]},
  der1:{x:37,y:80,p:2,rutas:[{a:"centro2",x:28,y:70},{a:"izq1",x:20,y:80}]},
  centro2:{x:28,y:70,p:3,rutas:[{a:"centro3",x:28,y:60},{a:"izq2",x:20,y:60},{a:"der2",x:37,y:60}]},

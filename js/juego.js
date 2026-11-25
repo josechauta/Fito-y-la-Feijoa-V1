@@ -9,9 +9,9 @@ const modal = $("modal"), modalTitulo = $("modal-titulo"), modalTexto = $("modal
 
 /* Banco editable. No hay campos de texto: todas las respuestas son botones. */
 const preguntas = [
- {enunciado:"¿Qué necesitan principalmente las plantas para realizar la fotosíntesis?",opciones:["Luz solar","Plástico","Arena seca"],correcta:"Luz solar"},
- {enunciado:"Verdadero o falso: las raíces absorben agua y minerales del suelo.",opciones:["Verdadero","Falso"],correcta:"Verdadero"},
- {enunciado:"¿Qué parte de la planta transporta agua entre la raíz y las hojas?",opciones:["Tallo","Flor","Fruto"],correcta:"Tallo"},
+ {enunciado:"¿Qué tipo de agricultura aplica CityHuertas?",opciones:["Orgánica","Industrial sostenible","Agroecología"],correcta:"Agroecología"},
+ {enunciado:"Verdadero o falso: Producción de Kilómetro cero significa que los productos se siembran en el sitio de consumo .",opciones:["Verdadero","Falso"],correcta:"Falso"},
+ {enunciado:"¿Cual es nombre de la Oruga?",opciones:["Feijoa","Fito","Fruto"],correcta:"Fito"},
  {enunciado:"Verdadero o falso: todas las orugas permanecen orugas toda su vida.",opciones:["Verdadero","Falso"],correcta:"Falso"},
  {enunciado:"¿En qué se transforma normalmente una oruga?",opciones:["Mariposa o polilla","Hormiga","Araña"],correcta:"Mariposa o polilla"}
 ];
@@ -21,9 +21,9 @@ const preguntas = [
 const mapaBase = {
  inicio:{x:28,y:90,p:0,rutas:[{a:"centro2",x:28,y:70},{a:"izq1",x:20,y:80},{a:"der1",x:37,y:80}]},
  izq1:{x:20,y:80,p:1,rutas:[{a:"centro2",x:28,y:70},{a:"der1",x:37,y:80}]},
- der1:{x:37,y:80,p:1,rutas:[{a:"centro2",x:28,y:70},{a:"izq1",x:20,y:80}]},
- centro2:{x:28,y:70,p:2,rutas:[{a:"centro3",x:28,y:60},{a:"izq2",x:20,y:60},{a:"der2",x:37,y:60}]},
- izq2:{x:20,y:60,p:2,rutas:[{a:"centro3",x:28,y:50},{a:"der2",x:37,y:60}]},
+ der1:{x:37,y:80,p:2,rutas:[{a:"centro2",x:28,y:70},{a:"izq1",x:20,y:80}]},
+ centro2:{x:28,y:70,p:3,rutas:[{a:"centro3",x:28,y:60},{a:"izq2",x:20,y:60},{a:"der2",x:37,y:60}]},
+ izq2:{x:20,y:60,p:4,rutas:[{a:"centro3",x:28,y:50},{a:"der2",x:37,y:60}]},
  der2:{x:37,y:60,p:2,rutas:[{a:"centro3",x:28,y:50},{a:"izq2",x:20,y:60}]},
  centro3:{x:28,y:50,p:3,rutas:[{a:"copa3",x:28,y:25},{a:"der3",x:37,y:40},{a:"izq3",x:20,y:40}]},
  izq3:{x:20,y:40,p:3,rutas:[{a:"copa3",x:28,y:25},{a:"der2",x:37,y:60}]},
